@@ -1,20 +1,28 @@
-# Ashwatthama AI v0.1 🤖
+# Ashwatthama AI v0.2 🤖
 
 Ashwatthama is a Python-based personal AI assistant developed from scratch.
 
 ## Features
 
-- Greeting Commands
-- Current Date
-- Current Time
-- Creator Information
-- Version Information
+### Applications
 - Open Chrome
 - Open VS Code
 - Open Paint
 - Open Notepad
 - Open YouTube
+- Open Instagram
 
+### Utilities
+- Current Date
+- Current Time
+
+### System Commands
+- Hello
+- Help
+- Version
+- Creator
+- Who Are You
+  
 ## Technologies Used
 
 - Python 3
@@ -36,15 +44,15 @@ python main.py
 
 ## Current Version
 
-v0.1
+v0.2
 
 ## Upcoming Features
 
-- Better Command Recognition
 - Voice Assistant
-- Internet Search
+- Speech Recognition
+- Text-to-Speech
 - Weather Information
-- System Automation
+- Web Search
 - AI Integration
 
 ## Developer
