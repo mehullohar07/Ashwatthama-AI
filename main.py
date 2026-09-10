@@ -1,60 +1,16 @@
-from commands import *
+from core.command_handler import *
 
-ASSISTANT_NAME = "Ashwatth"
+from core.assistant import banner
 
-print(f"{ASSISTANT_NAME} Initialized...")
+from core.command_handler import execute_command
+
+banner()
 
 while True:
-    command = input("How can I help you? ").lower()
-    
-    if command == "hello":
-        greet()
+    command = input("\nYou:").lower().strip()
 
-    elif command == "bye":
-        goodbye()
-
-    elif command == "who are you":
-       who_are_you()
-
-    elif command == "creator":
-        creator()
-
-    elif command == "current time":
-        current_time()
-
-    elif command == "current date":
-        current_date()
-
-    elif command == "help":
-        help_command()
-
-    elif command == "version":
-        version()
-
-    elif command == "open notepad":
-        open_notepad()
-
-    elif command == "open calculator":
-        open_calculator()
-
-    elif command == "open chrome":
-        open_chrome()
-
-    elif command == "open paint":
-        open_paint()
-
-    elif command == "open vscode":
-        open_vscode()
-
-    elif command == "open youtube":
-        open_youtube()
-
-    elif command == "open instagram":
-        open_instagram()
-
-    elif command == "exit":
-        print("Goodbye!")
+    if command == "exit":
+        print("Goodbye!!")
         break
 
-    else:
-        print("Command not recognized")
+    execute_command(command)
