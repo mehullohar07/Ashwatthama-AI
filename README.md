@@ -27,14 +27,20 @@ Ashwatthama is a Python-based personal AI assistant developed from scratch.
 
 - Python 3
 
-## Project Structure
-
-```text
 Ashwatthama-AI/
 │
+├── core/
+│   ├── assistant.py
+│   └── command_handler.py
+│
+├── modules/
+│   ├── apps.py
+│   ├── system.py
+│   └── utility.py
+│
 ├── main.py
-└── commands.py
-```
+├── README.md
+└── LICENSE
 
 ## Run
 
