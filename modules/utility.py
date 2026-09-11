@@ -1,27 +1,45 @@
 from  datetime import datetime
+from modules.voice import speak
 
-VERSION = "0.2"
+VERSION = "0.3"
 
 def greet():
-    print("Namaste Mehul! How can I assist you today?")
+    text = "Namaste Mehul! How can I assist you today?"
+    print(text)
+    speak(text)
 
 def goodbye():
-    print("Goodbye! have a productive day ahead!")
+    text = "Goodbye! have a productive day ahead!"
+    print(text)
+    speak(text)
 
 def current_time():
-    print("Current Time:", datetime.now().strftime("%H:%M:%S"))
+    text = "Current Time: " + datetime.now().strftime("%H:%M:%S")
+    print(text)
+    speak(text)
 
 def current_date():
-    print("Current Date:", datetime.now().strftime("%d/%m/%Y"))
+    text = "Current Date: " + datetime.now().strftime("%d/%m/%Y")
+    print(text)
+    speak(text)
 
 def creator():
-    print("My creator is Mehul.")
+    text = "My creator is Mehul."
+    print(text)
+    speak(text)
 
 def who_are_you():
-    print("I am Ashwatth, your AI assistant.")
+    text = "I am Ashwatth, your AI assistant."
+    print(text)
+    speak(text)
+
+def version():
+    text = f"Ashwatthama AI Version: {VERSION}"
+    print(text)
+    speak(text)
 
 def help_menu():
-    print("""
+    help_text = """
     =========================
             HELP MENU
     =========================
@@ -49,4 +67,6 @@ def help_menu():
     13. Help
     14. Version
     15. Exit
-    """)
+    """
+    print(help_text)
+    speak(help_text)
