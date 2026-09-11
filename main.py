@@ -1,8 +1,5 @@
 from core.command_handler import *
-
 from core.assistant import banner
-
-from core.command_handler import execute_command
 
 banner()
 
