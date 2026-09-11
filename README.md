@@ -1,70 +1,96 @@
-# Ashwatthama AI v0.2 🤖
+# Ashwatthama AI 🤖
 
-Ashwatthama is a Python-based personal AI assistant developed from scratch.
+A lightweight, command-line personal assistant written in Python. Ashwatthama AI currently helps with simple desktop actions, browser shortcuts, and date/time utilities.
+
+**Current release:** v0.2
 
 ## Features
 
-### Applications
-- Open Chrome
-- Open VS Code
-- Open Paint
-- Open Notepad
-- Open YouTube
-- Open Instagram
+### Launch applications
+- Chrome
+- Visual Studio Code
+- Paint
+- Notepad
 
-### Utilities
-- Current Date
-- Current Time
+### Open websites
+- YouTube
+- Instagram
 
-### System Commands
-- Hello
-- Help
-- Version
-- Creator
-- Who Are You
-  
-## Technologies Used
+### Utility commands
+- `current time`
+- `current date`
 
-- Python 3
+### Assistant commands
+- `hello`
+- `creator`
+- `who are you?`
+- `help`
+- `bye`
+- `exit`
 
+## Project structure
+
+```text
 Ashwatthama-AI/
-│
 ├── core/
-│   ├── assistant.py
-│   └── command_handler.py
-│
+│   ├── assistant.py        # Assistant identity and startup banner
+│   └── command_handler.py  # Command routing
 ├── modules/
-│   ├── apps.py
-│   ├── system.py
-│   └── utility.py
-│
-├── main.py
+│   ├── apps.py             # Desktop and browser actions
+│   ├── system.py           # Reserved for future system features
+│   └── utility.py          # Greetings, help, date, and time utilities
+├── main.py                 # Application entry point
 ├── README.md
 └── LICENSE
-
-## Run
-
-```bash
-python main.py
 ```
 
-## Current Version
+## Getting started
 
-v0.2
+### Requirements
 
-## Upcoming Features
+- Python 3
+- Windows, for the current desktop application shortcuts
+- Chrome and Visual Studio Code available on your system if you plan to use their launch commands
 
-- Voice Assistant
-- Speech Recognition
-- Text-to-Speech
-- Weather Information
-- Web Search
-- AI Integration
+### Run locally
 
-## Developer
+1. Clone the repository:
 
-Mehul Lohar
+   ```bash
+   git clone https://github.com/mehullohar07/Ashwatthama-AI.git
+   cd Ashwatthama-AI
+   ```
+
+2. Start the assistant:
+
+   ```bash
+   python main.py
+   ```
+
+3. Type a command when prompted—for example, `help`, `current time`, or `open youtube`. Type `exit` to close the assistant.
+
+## Version history
+
+### v0.2
+- Reorganized the project into `core/` and `modules/`
+- Separated command handling, application actions, and utility functions
+- Improved project organization and command flow
+
+### v0.1
+- Initial command-line release
+
+## Roadmap
+
+- Voice input and speech recognition
+- Text-to-speech responses
+- Weather information
+- Web search
+- AI-powered integrations
+
+## Author
+
+Created by [Mehul Lohar](https://github.com/mehullohar07).
 
 ---
 
-This project is being developed step-by-step to become a fully functional personal AI assistant.
+Ashwatthama AI is being developed step by step into a more capable personal assistant.
