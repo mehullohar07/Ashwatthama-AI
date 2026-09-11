@@ -1,8 +1,8 @@
 from modules.apps import *
-
 from modules.utility import *
 
 def execute_command(command):
+
     if command == "hello":
         greet()
 
@@ -19,25 +19,28 @@ def execute_command(command):
         current_date()
 
     elif command == "open chrome":
-        open_chrome()
+        open_app("chrome")
 
     elif command == "help":
         help_menu()
 
     elif command == "open paint":
-        open_paint()
+        open_app("paint")
 
-    elif command == "open vs code":
-        open_vscode()
+    elif command == "open vscode":
+        open_app("vscode")
 
     elif command == "open notepad":
-        open_notepad()
+        open_app("notepad")
 
     elif command == "open instagram":
-        open_instagram()
+        open_app("instagram")
 
     elif command == "open youtube":
-        open_youtube()
+        open_app("youtube")
+
+    elif command == "version":
+        version()
 
     elif command == "bye":
         goodbye()
