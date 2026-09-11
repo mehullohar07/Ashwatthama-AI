@@ -1,21 +1,18 @@
 import subprocess
+#import webbrowser
 
-import webbrowser
 
-def open_chrome():
-    subprocess.subprocess.Popen(["chrome.exe"])
+apps = {
+    "chrome": "chrome.exe",
+    "notepad": "notepad.exe",
+    "paint": "mspaint.exe",
+    "vscode": "Code.exe",
+    "instagram": "https://www.instagram.com",
+    "youtube": "https://www.youtube.com"
+}
 
-def open_notepad():
-    subprocess.subprocess.Popen(["notepad.exe"])
-
-def open_paint():
-    subprocess.subprocess.Popen(["mspaint.exe"])
-
-def open_vscode():
-    subprocess.subprocess.Popen(["Code.exe"])
-
-def open_instagram():
-    webbrowser.open("https://www.instagram.com")
-
-def open_youtube():
-    webbrowser.open("https://www.youtube.com")
+def open_app(app_name):
+    if app_name in apps:
+        subprocess.Popen(apps[app_name])
+    else:
+        print(f"Application '{app_name}' not found.")
