@@ -1,15 +1,15 @@
 # Ashwatthama AI 🤖
 
-A lightweight command-line personal assistant built with Python. It can run desktop commands, report the current date and time, and respond using text-to-speech.
+A lightweight voice-enabled command-line personal assistant built with Python. It can run desktop commands, report the current date and time, listen for spoken commands, and respond using text-to-speech.
 
-**Latest release:** [v0.3](https://github.com/mehullohar07/Ashwatthama-AI/releases/tag/v0.3)
+**Latest source version:** v0.3.1
 
 ## Features
 
 - Launch commonly used Windows applications: Chrome, Visual Studio Code, Paint, and Notepad
 - Open YouTube and Instagram commands
 - Tell the current date and time
-- Answer basic assistant commands such as `hello`, `creator`, and `who are you?`
+- Accept spoken commands through your microphone
 - Read responses aloud with text-to-speech
 - Show the installed assistant version with `version`
 
@@ -44,8 +44,9 @@ Ashwatthama-AI/
 │   ├── apps.py             # Application and website command mapping
 │   ├── system.py           # Reserved for future system features
 │   ├── utility.py          # Assistant responses and utility commands
-│   └── voice.py            # Text-to-speech support
+│   └── voice.py            # Text-to-speech and speech-to-text support
 ├── main.py                 # Application entry point
+├── requirements.txt
 └── README.md
 ```
 
@@ -55,20 +56,25 @@ Ashwatthama-AI/
 
 - Python 3
 - Windows, for the current desktop application commands
-- `pyttsx3` for text-to-speech
+- A working microphone for voice commands
 
 ### Installation
 
 ```bash
 git clone https://github.com/mehullohar07/Ashwatthama-AI.git
 cd Ashwatthama-AI
-pip install pyttsx3
+pip install -r requirements.txt
 python main.py
 ```
 
 Type `help` after startup to see the available commands.
 
 ## Version history
+
+### v0.3.1
+- Added microphone-based speech-to-text command input with `SpeechRecognition`
+- Added the required runtime dependency list
+- Updated the assistant banner and `version` output to v0.3.1
 
 ### v0.3
 - Added text-to-speech responses with `pyttsx3`
@@ -85,7 +91,6 @@ Type `help` after startup to see the available commands.
 
 ## Roadmap
 
-- Voice input and speech recognition
 - Weather information
 - Web search
 - AI-powered integrations
