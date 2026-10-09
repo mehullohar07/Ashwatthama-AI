@@ -32,6 +32,9 @@ def execute_command(command):
     elif command == "open paint":
         open_app("paint")
 
+    elif command == "open calculator":
+        open_app("calculator")
+
     elif command == "open vscode":
         open_app("vscode")
 
