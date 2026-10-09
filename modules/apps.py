@@ -1,3 +1,5 @@
+
+import os
 import subprocess
 import webbrowser
 
@@ -21,8 +23,35 @@ def open_app(app_name):
 
     if app.startswith(("http://", "https://")):
         webbrowser.open(app)
-    else:
-        try:
-            subprocess.Popen(app)
-        except OSError as error:
-            print(f"Could not open {app_name}: {error}")
+        return
+
+    if app_name == "chrome":
+        chrome_paths = [
+            os.path.expandvars(
+                r"%ProgramFiles%\Google\Chrome\Application\chrome.exe"
+            ),
+            os.path.expandvars(
+                r"%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe"
+            ),
+            os.path.expandvars(
+                r"%LocalAppData%\Google\Chrome\Application\chrome.exe"
+            ),
+        ]
+
+        for chrome_path in chrome_paths:
+            if os.path.isfile(chrome_path):
+                try:
+                    subprocess.Popen([chrome_path])
+                    return
+                except OSError as error:
+                    print(f"Could not open Chrome: {error}")
+                    return
+
+        print("Chrome installation not found. Opening default browser...")
+        webbrowser.open("https://www.google.com")
+        return
+
+    try:
+        subprocess.Popen(app)
+    except OSError as error:
+        print(f"Could not open {app_name}: {error}")
