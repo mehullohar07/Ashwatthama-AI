@@ -1,6 +1,4 @@
 import subprocess
-#import webbrowser
-
 
 apps = {
     "chrome": "chrome.exe",

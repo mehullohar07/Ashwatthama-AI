@@ -1,7 +1,12 @@
+
 from modules.apps import *
 from modules.utility import *
+from modules.llm import get_ai_response
+from modules.voice import speak
+
 
 def execute_command(command):
+    command = command.strip().lower()
 
     if command == "hello":
         greet()
@@ -42,8 +47,14 @@ def execute_command(command):
     elif command == "version":
         version()
 
-    elif command == "bye":
+    elif command in ("bye", "exit", "quit"):
         goodbye()
+        return "exit"
 
     else:
-        print("Sorry, I don't understand that command.")
+        print("\nAshwatthama is thinking...")
+        response = get_ai_response(command)
+        print(f"\nAshwatthama: {response}\n")
+        speak(response)
+
+    return None

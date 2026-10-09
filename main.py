@@ -1,18 +1,43 @@
-from core.command_handler import *
+
+from core.command_handler import execute_command
 from core.assistant import banner
 from modules.voice import take_command
 
-banner()
+def main():
+    banner()
 
-while True:
+    print("Choose your input mode:")
+    print("1. Text Mode")
+    print("2. Voice Mode")
 
-    command = take_command()
+    while True:
+        mode = input("Enter 1 or 2: ").strip()
+        if mode == "1":
+            mode = "text"
+            break
+        elif mode == "2":
+            mode = "voice"
+            break
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
 
-    if command == "":
-        continue
+    print(f"\nAshwatthama started in {mode.upper()} mode.")
+    print("Type 'exit' to quit.\n")
 
-    if command == "exit":
-        print("Goodbye!!")
-        break
+    while True:
+        if mode == "text":
+            command = input("You: ").strip().lower()
+        else:
+            command = take_command()
 
-    execute_command(command)
+        if not command:
+            continue
+
+        result = execute_command(command)
+
+        if result == "exit":
+            print("Goodbye!")
+            break
+
+if __name__ == "__main__":
+    main()

@@ -1,10 +1,10 @@
 ASSISTANT_NAME = "ASHWATTHAMA"
-VERSION = "0.3.1"
+VERSION = "0.4"
 
 def banner():
     print("""
 =================================
         ASHWATTHAMA AI
-        Version 0.3.1
+        Version 0.4
 =================================
 """)

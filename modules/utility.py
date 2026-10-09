@@ -1,7 +1,7 @@
 from  datetime import datetime
 from modules.voice import speak
 
-VERSION = "0.3.1"
+VERSION = "0.4"
 
 def greet():
     text = "Namaste Mehul! How can I assist you today?"
